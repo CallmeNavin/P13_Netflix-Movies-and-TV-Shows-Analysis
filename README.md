@@ -22,6 +22,9 @@ _**Period**_
 
 **C. Methodology**
 
+- Imported into PostgreSQL (Neon Cloud) using DBeaver (CSV → Table mapping).
+- Connect Neon to Mode Analytics using PostgreSQL connector.
+
 _**Key Findings**_
 
 _**Actionable Plans**_
