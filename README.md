@@ -24,6 +24,7 @@ _**Period**_
 
 - Imported into PostgreSQL (Neon Cloud) using DBeaver (CSV → Table mapping).
 - Connect Neon to Mode Analytics using PostgreSQL connector.
+- Using **Mode for Dashboard** visualize
 
 _**Key Findings**_
 
