@@ -22,18 +22,19 @@ _**Period**_
 
 **C. Methodology**
 
-- Imported into PostgreSQL (Neon Cloud) using DBeaver (CSV → Table mapping).
-- Connect Neon to Mode Analytics using PostgreSQL connector.
-- SQL Query on Mode (Đối với từng bước query sẽ xuất 1 data result (check folder Data. Lưu ý: Data Result mặc định chỉ xuất ra được 100 rows)
-  + I. EDA sơ bộ
-    - I.1. Type
-    - I.2. Check %Blank/null
-      + I.2.1. Xử lý Blank/Null trong các cột: director, cast, country
-    - I.3. Check %Zero value
-    - I.4: I.4. Check outliers (Dùng IQR)
-      --> Outlier detection using the IQR method flagged 41 records in date_added and ~100 records in release_year as potential outliers. However, upon inspection, these values are still meaningful and consistent with the business context (e.g., valid release years or valid added dates with fewer records). Therefore, all these records were retained for analysis.
-  + II. Query
-- Using **Mode for Dashboard** visualize
+- Imported Data: Dataset was imported into PostgreSQL (Neon Cloud) using DBeaver (CSV → Table mapping).
+- Connection: Connected Neon Cloud to Mode Analytics through the PostgreSQL connector.
+- SQL Queries: Executed directly in Mode. Each step produces a separate query result (see folder Query Results). Mode’s default export limit is 100 rows per query result.
+  + I. Basic EDA: 
+    + I.1. Type: Identified column names and data types.
+    + I.2. Check %Blank/Null. Detected missing values across key columns
+    + I.2.1. Handling Blank/Null values: Replaced missing values in director, cast, and country with "Unknown Director", "Unknown Cast", and "Unknown Country".
+    + I.3. Check %Zero Value: Checked for invalid zero values in date_added and release_year.
+    + I.4. Check Outliers (IQR method):
+      - Applied IQR method to detect potential outliers in date_added and release_year.
+      - Result: Outlier detection flagged 41 records in date_added and ~100 records in release_year as potential outliers. Upon inspection, these values are still meaningful and consistent with the business context (e.g., valid release years or valid added dates with fewer records). Therefore, all records were retained for subsequent analysis.
+  + II. Query for Insights:
+- Using Mode for Dashboard visualize
 
 _**Key Findings**_
 
