@@ -24,6 +24,15 @@ _**Period**_
 
 - Imported into PostgreSQL (Neon Cloud) using DBeaver (CSV → Table mapping).
 - Connect Neon to Mode Analytics using PostgreSQL connector.
+- SQL Query on Mode (Đối với từng bước query sẽ xuất 1 data result (check folder Data. Lưu ý: Data Result mặc định chỉ xuất ra được 100 rows)
+  + I. EDA sơ bộ
+    - I.1. Type
+    - I.2. Check %Blank/null
+      + I.2.1. Xử lý Blank/Null trong các cột: director, cast, country
+    - I.3. Check %Zero value
+    - I.4: I.4. Check outliers (Dùng IQR)
+      --> Outlier detection using the IQR method flagged 41 records in date_added and ~100 records in release_year as potential outliers. However, upon inspection, these values are still meaningful and consistent with the business context (e.g., valid release years or valid added dates with fewer records). Therefore, all these records were retained for analysis.
+  + II. Query
 - Using **Mode for Dashboard** visualize
 
 _**Key Findings**_
