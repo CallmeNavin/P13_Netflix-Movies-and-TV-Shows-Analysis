@@ -26,7 +26,7 @@ _**Period**_
 - Connection: Connected Neon Cloud to Mode Analytics through the PostgreSQL connector.
 - SQL Queries: Executed directly in Mode. Each step produces a separate query result (see folder Query Results). Mode’s default export limit is 100 rows per query result.
   + I. Basic EDA: 
-    + I.1. Type: Identified column names and data types.
+    + I.1. Check Column Type: Identified column names and data types.
     + I.2. Check %Blank/Null. Detected missing values across key columns
     + I.2.1. Handling Blank/Null values: Replaced missing values in director, cast, and country with "Unknown Director", "Unknown Cast", and "Unknown Country".
     + I.3. Check %Zero Value: Checked for invalid zero values in date_added and release_year.
