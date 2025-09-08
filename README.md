@@ -48,6 +48,8 @@ _**Period**_
     - II.4. Movies & TV Show trend through Years
 - Using Mode for Dashboard visualize of some big idea
 
+**D. Key Findings & Actionable Plans**
+
 _**Key Findings**_
 
 - United States, India have the largest share of content (32% & 11.04%). In the US, TV-MA is dominant (10.54%) while India, TV-14 leads (6.25%) → Netflix is strongly focused on these two major markets and should tailor content strategies accordingly.
